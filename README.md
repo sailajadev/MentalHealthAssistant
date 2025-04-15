@@ -53,11 +53,9 @@ export NVM_DIR="$HOME/.nvm"
     [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
     [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
-# Docker commands
+# Useful Docker commands
 
 docker build -t mental-health-assistant .
-docker run -p 5000:5000 mental-health-assistant --restart always
-
-
+docker run -p 5000:5000 mental-health-assistant
 docker ps
 docker stop d5c99fdc66c5
