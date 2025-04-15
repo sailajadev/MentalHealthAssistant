@@ -8,7 +8,11 @@ function runMLModel(text) {
     process.stdout.on('data', data => result += data.toString());
     process.stderr.on('data', data => console.error(data.toString()));
 
-    process.on('close', () => resolve(result.trim()));
+    process.on('close', () => {
+      const output = result.trim();
+      console.log("input:", text, "output:", JSON.stringify(output));
+      resolve(output);
+    });
   });
 }
 

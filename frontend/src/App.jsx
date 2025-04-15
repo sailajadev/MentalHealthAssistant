@@ -28,6 +28,7 @@ function App() {
       body: JSON.stringify({ text: predictText }),
     });
     const data = await res.json();
+    console.log("input", predictText, "output", JSON.stringify(data));
     setPrediction(data.prediction);
   };
 
@@ -38,6 +39,7 @@ function App() {
       body: JSON.stringify({ text: adviceText }),
     });
     const data = await res.json();
+    console.log("input", adviceText, "output", JSON.stringify(data));
     setAdvice(data.advice);
   };
 
