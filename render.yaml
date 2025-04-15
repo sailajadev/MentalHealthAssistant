@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: mental-health-assistant
+    env: docker
+    plan: free
+    region: oregon  # or frankfurt if you want EU
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
